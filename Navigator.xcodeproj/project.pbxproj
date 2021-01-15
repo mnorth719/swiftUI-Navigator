@@ -17,6 +17,7 @@
 		221D54F725B13A6E0084C603 /* ComplexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221D54F625B13A6E0084C603 /* ComplexView.swift */; };
 		221D54FF25B13AF30084C603 /* ComplexChildView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221D54FE25B13AF30084C603 /* ComplexChildView.swift */; };
 		221D550E25B14F050084C603 /* DeepLinkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221D550D25B14F050084C603 /* DeepLinkHandler.swift */; };
+		221D551625B2347D0084C603 /* UIHostingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221D551525B2347D0084C603 /* UIHostingProvider.swift */; };
 		22BC315125AFAD260077CC8C /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BC315025AFAD260077CC8C /* Router.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		221D54FE25B13AF30084C603 /* ComplexChildView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexChildView.swift; sourceTree = "<group>"; };
 		221D550625B14E490084C603 /* Navigator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Navigator.entitlements; sourceTree = "<group>"; };
 		221D550D25B14F050084C603 /* DeepLinkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkHandler.swift; sourceTree = "<group>"; };
+		221D551525B2347D0084C603 /* UIHostingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHostingProvider.swift; sourceTree = "<group>"; };
 		22BC315025AFAD260077CC8C /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,6 +150,7 @@
 			children = (
 				22BC315025AFAD260077CC8C /* Router.swift */,
 				221D550D25B14F050084C603 /* DeepLinkHandler.swift */,
+				221D551525B2347D0084C603 /* UIHostingProvider.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				221D19C625A54B1C0006747F /* ChildView.swift in Sources */,
 				221D54F725B13A6E0084C603 /* ComplexView.swift in Sources */,
 				221D550E25B14F050084C603 /* DeepLinkHandler.swift in Sources */,
+				221D551625B2347D0084C603 /* UIHostingProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

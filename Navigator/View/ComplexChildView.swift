@@ -8,20 +8,17 @@
 import SwiftUI
 
 struct ComplextChildView1: View {
-    @Binding var routeComplex: Route.Complex?
-    @Binding var route: Route?
-
     var body: some View {
         VStack {
             Text("Complex Child 1")
                 .padding()
             Button("root") {
-                $route.wrappedValue = nil
+
             }
                 .padding()
             Button("Complex root") {
-                $routeComplex.wrappedValue = nil
-            }                
+
+            }
         }.onAppear(perform: {
             print("Child1 appeared")
         })

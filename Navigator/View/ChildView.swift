@@ -8,26 +8,37 @@
 import SwiftUI
 
 struct ChildView1: View {
-    @Binding var route: Route?
+    private var router: Router {
+        SimpleDIContainer.shared.router
+    }
     @State var presentingChild2 = false
 
     var body: some View {
         VStack {
             Text("Child 1")
                 .padding()
-            NavigationLink("Complex", destination: ComplexView(rootRoute: $route), isActive: $presentingChild2)
+            NavigationLink("Complex", destination: ComplexView(), isActive: $presentingChild2)
                 .padding()
             Button("root") {
-                $route.wrappedValue = nil
+                router.goToRoot()
             }
         }
     }
 }
 
 struct ChildView2: View {
+    private var router: Router {
+        SimpleDIContainer.shared.router
+    }
     var body: some View {
         Text("View 2")
             .padding()
+        Button("Modal child 3") {
+            router.route(to: .view3, presentationStyle: .modal)
+        }
+        Button("root") {
+            router.goToRoot()
+        }
     }
 }
 

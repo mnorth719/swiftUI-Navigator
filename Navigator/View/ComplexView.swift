@@ -8,43 +8,24 @@
 import SwiftUI
 
 struct ComplexView: View {
-    @Binding var rootRoute: Route?
-    @State var route: Route.Complex?
+    private var router: Router {
+        SimpleDIContainer.shared.router
+    }
+    @State var isPresenting = false
 
     var body: some View {
         ZStack {
-            if let destination = destinationView, let route = route {
-                NavigationLink(destination: destination, tag: route, selection: $route, label: {})
-            }
             VStack {
                 Text("Complex View")
                     .padding()
                 Button(action: {
-                    route = .view1
+                    router.route(to: .view2, presentationStyle: .push)
                 }, label: {
-                    Text("Go to Complex Child 1")
+                    Text("Go to  Child 2")
                 })
-            }
-        }.onChange(of: route, perform: { value in
-            guard let value = value else { return }
-            route = value
-        })
-        .onAppear(perform: {
-            $route.wrappedValue = nil
-        })
-    }
-
-    var destinationView: some View {
-        DynamicView<AnyView?>() {
-            switch route {
-            case .view1:
-                return AnyView(ComplextChildView1(routeComplex: $route, route: $rootRoute))
-            case .view2:
-                return AnyView(ComplextChildView2())
-            case .view3:
-                return AnyView(ComplextChildView3())
-            default:
-                return nil
+                NavigationLink(destination: ChildView2()) {
+                    Text("Go to  Child 2 via Nav link")
+                }                
             }
         }
     }
