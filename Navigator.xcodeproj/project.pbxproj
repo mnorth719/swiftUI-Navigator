@@ -13,6 +13,11 @@
 		221D199C25A54A830006747F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 221D199B25A54A830006747F /* Preview Assets.xcassets */; };
 		221D19A725A54A840006747F /* NavigatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221D19A625A54A840006747F /* NavigatorTests.swift */; };
 		221D19B225A54A840006747F /* NavigatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221D19B125A54A840006747F /* NavigatorUITests.swift */; };
+		221D19C625A54B1C0006747F /* ChildView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221D19C525A54B1C0006747F /* ChildView.swift */; };
+		221D54F725B13A6E0084C603 /* ComplexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221D54F625B13A6E0084C603 /* ComplexView.swift */; };
+		221D54FF25B13AF30084C603 /* ComplexChildView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221D54FE25B13AF30084C603 /* ComplexChildView.swift */; };
+		221D550E25B14F050084C603 /* DeepLinkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221D550D25B14F050084C603 /* DeepLinkHandler.swift */; };
+		22BC315125AFAD260077CC8C /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BC315025AFAD260077CC8C /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +50,12 @@
 		221D19AD25A54A840006747F /* NavigatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NavigatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		221D19B125A54A840006747F /* NavigatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorUITests.swift; sourceTree = "<group>"; };
 		221D19B325A54A840006747F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		221D19C525A54B1C0006747F /* ChildView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildView.swift; sourceTree = "<group>"; };
+		221D54F625B13A6E0084C603 /* ComplexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexView.swift; sourceTree = "<group>"; };
+		221D54FE25B13AF30084C603 /* ComplexChildView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexChildView.swift; sourceTree = "<group>"; };
+		221D550625B14E490084C603 /* Navigator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Navigator.entitlements; sourceTree = "<group>"; };
+		221D550D25B14F050084C603 /* DeepLinkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkHandler.swift; sourceTree = "<group>"; };
+		22BC315025AFAD260077CC8C /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +106,10 @@
 		221D199325A54A810006747F /* Navigator */ = {
 			isa = PBXGroup;
 			children = (
+				221D550625B14E490084C603 /* Navigator.entitlements */,
+				221D19C425A54AEC0006747F /* View */,
+				221D19C225A54AD00006747F /* Router */,
 				221D199425A54A810006747F /* NavigatorApp.swift */,
-				221D199625A54A810006747F /* ContentView.swift */,
 				221D199825A54A830006747F /* Assets.xcassets */,
 				221D199D25A54A830006747F /* Info.plist */,
 				221D199A25A54A830006747F /* Preview Content */,
@@ -128,6 +141,26 @@
 				221D19B325A54A840006747F /* Info.plist */,
 			);
 			path = NavigatorUITests;
+			sourceTree = "<group>";
+		};
+		221D19C225A54AD00006747F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				22BC315025AFAD260077CC8C /* Router.swift */,
+				221D550D25B14F050084C603 /* DeepLinkHandler.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		221D19C425A54AEC0006747F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				221D199625A54A810006747F /* ContentView.swift */,
+				221D19C525A54B1C0006747F /* ChildView.swift */,
+				221D54F625B13A6E0084C603 /* ComplexView.swift */,
+				221D54FE25B13AF30084C603 /* ComplexChildView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +292,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22BC315125AFAD260077CC8C /* Router.swift in Sources */,
 				221D199725A54A810006747F /* ContentView.swift in Sources */,
+				221D54FF25B13AF30084C603 /* ComplexChildView.swift in Sources */,
 				221D199525A54A810006747F /* NavigatorApp.swift in Sources */,
+				221D19C625A54B1C0006747F /* ChildView.swift in Sources */,
+				221D54F725B13A6E0084C603 /* ComplexView.swift in Sources */,
+				221D550E25B14F050084C603 /* DeepLinkHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +455,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Navigator/Navigator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Navigator/Preview Content\"";
 				DEVELOPMENT_TEAM = F74Z38KSGQ;
@@ -429,6 +468,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mmn.Navigator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -439,6 +479,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Navigator/Navigator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Navigator/Preview Content\"";
 				DEVELOPMENT_TEAM = F74Z38KSGQ;
@@ -451,6 +492,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mmn.Navigator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
