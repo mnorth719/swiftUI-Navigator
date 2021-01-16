@@ -23,6 +23,11 @@ struct ComplexView: View {
                 }, label: {
                     Text("Go to  Child 2")
                 })
+                Button(action: {
+                    router.goToRoot()
+                }, label: {
+                    Text("Go to Root")
+                })
                 NavigationLink(destination: ChildView2()) {
                     Text("Go to  Child 2 via Nav link")
                 }                

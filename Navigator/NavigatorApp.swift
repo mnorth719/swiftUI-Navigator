@@ -8,36 +8,6 @@
 import UIKit
 import SwiftUI
 
-//@main
-//struct NavigatorApp: App {
-//    private let deepLinkHandler = DeepLinkHandler()
-//
-//    var body: some Scene {
-//        WindowGroup {
-//            NavigationView {
-//                RootView(route: $route)
-//                    .navigationTitle("Navigator!")
-//                    .onOpenURL(perform: { url in
-//                        guard
-//                            let linkedRoute = deepLinkHandler.handle(url)
-//                        else {
-//                            return
-//                        }
-//                        // If something is being presented, pop to root before routing.
-//                        if route != nil {
-//                            route = nil
-//                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-//                                route = linkedRoute
-//                            }
-//                        } else {
-//                            route = linkedRoute
-//                        }
-//                    })
-//            }
-//        }
-//    }
-//}
-
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
